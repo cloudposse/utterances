@@ -48,7 +48,7 @@ document.head.insertAdjacentHTML(
   </style>`);
 
 // create the comments iframe and it's responsive container
-const utterancesOrigin = 'utterances'
+const utterancesOrigin = '/utterances'
 const url = `${utterancesOrigin}/index.html`;
 script.insertAdjacentHTML(
   'afterend',
