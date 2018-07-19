@@ -5,7 +5,7 @@ let script = document.currentScript as HTMLScriptElement;
 if (script === undefined) {
   // Internet Explorer :(
   // tslint:disable-next-line:max-line-length
-  script = document.querySelector('script[src^="https://utteranc.es/client.js"],script[src^="http://localhost:4000/client.js"]') as HTMLScriptElement;
+  script = document.querySelector('script[src^="utterances/client.js"]"]') as HTMLScriptElement;
 }
 
 // gather script element's attributes
@@ -48,7 +48,7 @@ document.head.insertAdjacentHTML(
   </style>`);
 
 // create the comments iframe and it's responsive container
-const utterancesOrigin = script.src.match(/^https:\/\/utteranc.es|http:\/\/localhost:\d+/)![0];
+const utterancesOrigin = 'utterances'
 const url = `${utterancesOrigin}/utterances.html`;
 script.insertAdjacentHTML(
   'afterend',
