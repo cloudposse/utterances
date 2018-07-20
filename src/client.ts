@@ -48,8 +48,7 @@ document.head.insertAdjacentHTML(
   </style>`);
 
 // create the comments iframe and it's responsive container
-const utterancesOrigin = '/utterances'
-const url = `${utterancesOrigin}/index.html`;
+const url = '/utterances';
 script.insertAdjacentHTML(
   'afterend',
   `<div class="utterances">
@@ -60,9 +59,6 @@ script.parentElement!.removeChild(script);
 
 // adjust the iframe's height when the height of it's content changes
 addEventListener('message', event => {
-  if (event.origin !== utterancesOrigin) {
-    return;
-  }
   const data = event.data as ResizeMessage;
   if (data && data.type === 'resize' && data.height) {
     container.style.height = `${data.height}px`;
