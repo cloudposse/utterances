@@ -4,7 +4,7 @@ import { param } from './deparam';
 const authorizeUrl = `${UTTERANCES_API}/authorize`;
 const tokenUrl = `${UTTERANCES_API}/token`;
 // tslint:disable-next-line:variable-name
-const redirect_uri = `${location.origin}/authorized.html`;
+const redirect_uri = `${location.origin}/components/utterances/authorized.html`;
 
 class Token {
   private readonly storageKey = 'OAUTH_TOKEN2';
