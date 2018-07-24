@@ -5,7 +5,7 @@ let script = document.currentScript as HTMLScriptElement;
 if (script === undefined) {
   // Internet Explorer :(
   // tslint:disable-next-line:max-line-length
-  script = document.querySelector('script[src^="/js/client.js"]"]') as HTMLScriptElement;
+  script = document.querySelector('script[src^="/components/utterances/client.js"]') as HTMLScriptElement;
 }
 
 // gather script element's attributes
@@ -48,7 +48,7 @@ document.head.insertAdjacentHTML(
   </style>`);
 
 // create the comments iframe and it's responsive container
-const url = '/utterances';
+const url = '/components/utterances/utterances.html';
 script.insertAdjacentHTML(
   'afterend',
   `<div class="utterances">
